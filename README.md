@@ -82,9 +82,9 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- 10.0.0.5
-- 10.0.0.6
-- 10.0.0.7
+- Web-1 - 10.0.0.5
+- Web-2 - 10.0.0.6
+- Web-3 - 10.0.0.7
 
 We have installed the following Beats on these machines:
 - Metricbeats version 7.6.1
@@ -98,7 +98,14 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the `elk.yaml` file to `/etc/ansible/`.
-- Update the `/etc/ansible/hosts` file to include the IP address of the ELK VM `10.1.0.4`
-- Run the playbook `elk.yml` by running `ansible-playbook /etc/ansible/elk.yaml`, and navigate to `http://ELK_VM_PUBLIC_IP:5601/app/kibana` to check that the installation worked as expected.
+- Copy the `elk.yaml` file to `/etc/ansible/` folder on the docker provisioner.
+- Update the `/etc/ansible/hosts` file to include the IP address of the ELK VM `10.1.0.4`.
+- Run the playbook `elk.yml` by running `ansible-playbook /etc/ansible/elk.yaml`.
+- Navigate to `http://ELK_VM_PUBLIC_IP:5601/app/kibana` to check that the installation worked as expected.
+- Copy the `filebeat-playbook.yaml` and `metricbeat-playbook.yaml` files to the folder `/etc/ansible/` folder on the docker provisioner.
+- Create a new folder `/etc/ansible/files` on the docker provisioner.
+- Copy the files `filebeat-config.yaml` and `metricbeat-config.yaml` into the newly created `/etc/ansible/files` folder.
+- Run the playbook `filbeat-playbook.yaml` by running the command `ansible-playbook filebeat-playbook.yaml` to install filebeat on the ELK VM and start monitoring the webserver nodes.
+- Run the playbook `metricbeat-playbook.yaml` by running the command `ansible-playbook metricbeat-playbook.yaml` to install metricbeat on the ELK VM and start monitoring the webserver nodes.
+- Navigate to `http://ELK_VM_PUBLIC_IP:5601/app/kibana` and check to see metricbeat and filebeat entries.
 
