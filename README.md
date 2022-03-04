@@ -56,11 +56,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump-Box-Provisioner | Yes         | Public IP / 10.0.0.0/16 / 10.1.0.0/16   |
-|    Web-1      | No                    | 10.0.0.0/16 10.1.0.0/16                     |
-|    Web-2     | No                    | 10.0.0.0/16  10.1.0.0/16                   |
-|    Web-3     | No                    | 10.0.0.0/16  10.1.0.0/16                   |
-|    ELK    | Yes                    | Public IP / 10.0.0.0/16  10.1.0.0/16                   |
+| Jump-Box-Provisioner | Yes         | Public IP / 10.0.0.0/24 / 10.1.0.0/24   |
+|    Web-1      | No                    | 10.0.0.0/24 10.1.0.0/24                     |
+|    Web-2     | No                    | 10.0.0.0/24  10.1.0.0/24                   |
+|    Web-3     | No                    | 10.0.0.0/24  10.1.0.0/24                   |
+|    ELK    | Yes                    | Public IP / 10.0.0.0/24  10.1.0.0/24                   |
 
 ### Elk Configuration
 
