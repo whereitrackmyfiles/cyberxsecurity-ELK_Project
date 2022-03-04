@@ -1,2 +1,2 @@
 # cyberxsecurity
-Git repository where I track my files 
+This is a collection of all my submissibles for cyberxsecurity bootcamp.
