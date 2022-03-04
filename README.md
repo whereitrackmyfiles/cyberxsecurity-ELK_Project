@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -102,3 +103,7 @@ SSH into the control node and follow the steps below:
 - Update the `/etc/ansible/hosts` file to include the IP address of the ELK VM `10.1.0.4`
 - Run the playbook `elk.yml` by running `ansible-playbook /etc/ansible/elk.yaml`, and navigate to `http://ELK_VM_PUBLIC_IP:5601/app/kibana` to check that the installation worked as expected.
 
+=======
+# cyberxsecurity
+This is a collection of all my submissibles for cyberxsecurity bootcamp.
+>>>>>>> 4d3cb9adc27ee1f862d3e8e7e36b39f6881bddba
