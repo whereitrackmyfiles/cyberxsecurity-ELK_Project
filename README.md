@@ -69,10 +69,10 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - Update apt cache
-- Install docker.io
-- Install pip
-- Change the max map count to 262144
-- Download the sebp/elk container image and publish to ports 5601, 9200 & 5044
+- Install `docker.io`
+- Install `pip`
+- Change the max map count to `262144`
+- Download the `sebp/elk` container image and publish to ports `5601, 9200 & 5044`
 - Enable docker service on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -87,8 +87,8 @@ This ELK server is configured to monitor the following machines:
 - Web-3 - 10.0.0.7
 
 We have installed the following Beats on these machines:
-- Metricbeats version 7.6.1
-- Filebeats version 7.6.1
+- Metricbeat version 7.6.1
+- Filebeat version 7.6.1
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat collects information about file system based from system logs. It is helpful in determining changes like apache errors.
