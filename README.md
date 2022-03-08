@@ -21,11 +21,11 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the `D*mn Vulnerable Web Application`.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - Load balancing is the process of distributing traffic to multiple servers. A load balancer sits between the client devices and the webservers and ensures that traffic is distributed accordingly (depending on the selected load balancing technique). A load balancer protects the service from Denial of Service by ensuring multiple servers are available to respond to heavy traffic. 
-- A Jump box is a Public / Internet facing server that allows access to a network via certain open ports or service (usually port 22 SSH). The advantage of having a jump box is that it is hardened in such a way that there are only limited services running on the machine that can be targetted by attackers. It acts as a single point of entry and audit point for traffic before being able to access the resources within the network.
+- A Jump box is a Public / Internet facing server that allows access to an internal or private network via certain open ports or service (usually port 22/SSH). The advantage of having a jump box is that it is secured and hardened in such a way that there are only limited services running on the machine that can be targetted by attackers. It acts as a single point of entry and audit point for traffic before being able to access the resources within the network.
  
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system metrics.
 - Filebeat is a lightweight agent that monitors and collects data from log files within the system.
